@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route('/hello')
+def hello():
+    return render_template('hello.html')
+
 @app.errorhandler(Exception)
 def handle_exception(e):
     # Log the error
